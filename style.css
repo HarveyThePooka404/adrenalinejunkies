@@ -20,7 +20,7 @@ footer {
 }
 
 .marker {
-    transform:translate(282px,355px) scale(0.1);
+    transform:scale(0.1);
 
 }
 
@@ -47,4 +47,8 @@ main {
     display:grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat (2, auto);
+}
+
+#13 {
+    transform:translate(285px, 482px);
 }
