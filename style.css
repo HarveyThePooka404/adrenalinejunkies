@@ -26,12 +26,12 @@ footer {
 
 .marker2{
     fill:hotpink;
-    transform:translate(610px,482px) scale(0.1);
+    transform:translate(120px,361px) scale(0.1);
 }
 
 .marker3{
     fill:black;
-    transform:translate(610px,228px) scale(0.1);
+    transform:translate(117px,351px) scale(0.1);
 }
 
 main {
@@ -41,14 +41,22 @@ main {
 
 .wrapper {
     grid-row:2;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
 }
 
 .modal {
     display:grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat (2, auto);
+    display:none;
 }
 
-#13 {
-    transform:translate(285px, 482px);
+.cartouche {
+    border:solid 1px black;
+    border-radius: 10px;
+    padding: 2em;
 }
+
+

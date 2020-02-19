@@ -37,11 +37,7 @@ function createElements(newdata) {
 
 
     //thinking about modal
-    clone_marker.addEventListener("click", () => {
-        console.log(`${newdata.gsx$id.$t}`);
-
-    })
-
+    clone_marker.addEventListener("click", fillModal);
     document.querySelector(".denmark-map").appendChild(clone_marker);
 
     //create thumbnail
@@ -55,10 +51,22 @@ function createElements(newdata) {
     clone_thumbnail.querySelector(".image-thumbnail").src = "";
     // console.log(`${newdata.gsx$venue.$t} and ${newdata.gsx$id.$t}`);
 
+    //adds modal to thumbnail
 
-
+    clone_thumbnail.querySelector(".price-thumbnail").addEventListener("click", fillModal);
     document.querySelector(".wrapper").appendChild(clone_thumbnail);
 
 
+    function fillModal(){
+        console.log(`${newdata.gsx$id.$t}`);
+        title_modal.textContent = newdata.gsx$venue.$t;
+        img_modal.src = newdata.gsx$thumbnail.$t;
+        desc_left.textContent = newdata.gsx$description.$t;
+        price_modal.textContent = newdata.gsx$price.$t;
+        Xtremness_modal.textContent = newdata.gsx$scary.$t;
+        ff.textContent = newdata.gsx$ff.$t;
+        address.textContent = newdata.gsx$address.$t;
+        opening_hour.textContent = newdata.gsx$hours.$t;
 
+    }
 }
