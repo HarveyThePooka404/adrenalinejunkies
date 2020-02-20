@@ -4,8 +4,8 @@
 }
 
 :root {
-  --main-color: #028695;
-    --sub-color:#70AFA4;
+  --sub-color: #028695;
+    --main-color:#70AFA4;
     --button-color:#FF9648;
     --button-hover:#FBD266;
 
@@ -20,14 +20,14 @@
 
 
 header {
-    background-color: --main-color;
+    background-color: var(--main-color);
 }
 
 footer {
-    background-color:hotpink;
+    background-color:var(--main-color);
 }
 .Sjaelland:hover {
-    fill: hotpink;
+    fill: var(--sub-color);
 }
 
 .denmark-map {

@@ -33,8 +33,12 @@ function createElements(newdata) {
 
     // console.log(`${newdata.gsx$id.$t}`);
 
-
+    console.log(clone_marker)
     //thinking about modal
+    console.log(`translate(${newdata.gsx$translatex.$t}px,${newdata.gsx$translatey.$t}px)`)
+    //clone_marker.style.transform = `translate(${newdata.gsx$translatey.$t}px, ${newdata.gsx$translatey.$t}px)`;
+    clone_marker.style.transform = `translate(${newdata.gsx$translatex}px, ${newdata.gsx$translatey}px)`;
+    clone_marker.style.fill = `hotpink`;
     clone_marker.addEventListener("click", fillModal);
     document.querySelector(".denmark-map").appendChild(clone_marker);
 
@@ -51,7 +55,7 @@ function createElements(newdata) {
 
     //adds modal to thumbnail
 
-    clone_thumbnail.querySelector(".price-thumbnail").addEventListener("click", fillModal);
+    clone_thumbnail.querySelector(".cartouche").addEventListener("click", fillModal);
     document.querySelector(".wrapper").appendChild(clone_thumbnail);
 
     //modal appearing code
