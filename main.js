@@ -48,14 +48,16 @@ function createElements(newdata) {
     const clone_thumbnail = thumbnail.cloneNode(true);
 
     clone_thumbnail.querySelector(".title-thumbnail").textContent = newdata.gsx$venue.$t;
-    clone_thumbnail.querySelector(".price-thumbnail").textContent = newdata.gsx$price.$t;
+    clone_thumbnail.querySelector(".price-thumbnail span").textContent = newdata.gsx$price.$t;
     clone_thumbnail.querySelector(".Xtremness-thumbnail").textContent = newdata.gsx$scary.$t;
     clone_thumbnail.querySelector(".image-thumbnail").src = newdata.gsx$thumbnail.$t;
     // console.log(`${newdata.gsx$venue.$t} and ${newdata.gsx$id.$t}`);
 
     //adds modal to thumbnail
 
+
     clone_thumbnail.querySelector(".cartouche").addEventListener("click", fillModal);
+
     document.querySelector(".wrapper").appendChild(clone_thumbnail);
 
     //modal appearing code
