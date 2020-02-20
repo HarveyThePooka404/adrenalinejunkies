@@ -56,17 +56,25 @@ function createElements(newdata) {
     clone_thumbnail.querySelector(".price-thumbnail").addEventListener("click", fillModal);
     document.querySelector(".wrapper").appendChild(clone_thumbnail);
 
+    //modal appearing code
+
+    const modal_background = document.querySelector(".modal");
 
     function fillModal(){
+        modal_background.style.display = "block";
+
         console.log(`${newdata.gsx$id.$t}`);
         title_modal.textContent = newdata.gsx$venue.$t;
         img_modal.src = newdata.gsx$thumbnail.$t;
         desc_left.textContent = newdata.gsx$description.$t;
         price_modal.textContent = newdata.gsx$price.$t;
         Xtremness_modal.textContent = newdata.gsx$scary.$t;
-        ff.textContent = newdata.gsx$ff.$t;
         address.textContent = newdata.gsx$address.$t;
-        opening_hour.textContent = newdata.gsx$hours.$t;
 
     }
+
+        window.onclick = function (event) {
+        if (event.target == modal_background) {
+            modal_background.style.display = "none";}}
 }
+
