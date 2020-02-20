@@ -47,7 +47,9 @@ function createElements(newdata) {
     clone_thumbnail.querySelector(".price-thumbnail span").textContent = newdata.gsx$price.$t;
     clone_thumbnail.querySelector(".Xtremness-thumbnail").textContent = newdata.gsx$scary.$t;
     clone_thumbnail.querySelector(".image-thumbnail").src = newdata.gsx$thumbnail.$t;
-    // console.log(`${newdata.gsx$venue.$t} and ${newdata.gsx$id.$t}`);
+    clone_thumbnail.querySelector(".cartouche").style.backgroundImage = `url("${newdata.gsx$thumbnail.$t}")`;
+
+    console.log(`url(${newdata.gsx$thumbnail.$t})`);
 
     //adds modal to thumbnail
 
