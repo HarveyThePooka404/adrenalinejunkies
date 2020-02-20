@@ -55,7 +55,7 @@ function createElements(newdata) {
     //adds modal to thumbnail
 
 
-    clone_thumbnail.querySelector(".cartouche").addEventListener("click", fillModal);
+    clone_thumbnail.querySelector(".overlay").addEventListener("click", fillModal);
 
     document.querySelector(".wrapper").appendChild(clone_thumbnail);
 

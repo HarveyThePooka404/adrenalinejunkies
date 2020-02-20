@@ -143,7 +143,7 @@ main {
 .modal-content {
     margin: auto;
     border: 1px solid #888;
-    width: auto;
+    width: 70%;
     background-color: white;
     padding: 2em;
     display:grid;
