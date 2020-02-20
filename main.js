@@ -64,7 +64,7 @@ function createElements(newdata) {
     const modal_background = document.querySelector(".modal");
 
     function fillModal(){
-        modal_background.style.display = "grid";
+        modal_background.style.display = "block";
 
         console.log(`${newdata.gsx$id.$t}`);
         title_modal.textContent = newdata.gsx$venue.$t;

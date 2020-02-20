@@ -10,6 +10,7 @@
     --main-color:#70AFA4;
     --button-color:#FF9648;
     --button-hover:#FBD266;
+    --red-color:#F55E50;
 
 }
 
@@ -43,6 +44,10 @@ footer {
 
 }
 
+.marker:hover{
+    fill:var(--red-color);
+}
+
 main {
     display: grid;
     grid-template-rows: repeat(2, auto);
@@ -61,6 +66,7 @@ main {
 
 
 .cartouche {
+    cursor: pointer;
     grid-area: 1 / 1;
     padding-top: 5em;
     padding-bottom: 5em;
@@ -112,18 +118,36 @@ main {
     background-color: rgba(0, 0, 0, 0.6);
     /* Black w/ opacity */
 
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat (2, auto);
 }
 
+.wrapper-top-modal {
+    grid-row: 1;
+    text-align: center;
+}
+
+.wrapper-bottom-modal {
+    padding-top: 2em;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.right-column {
+    padding-left: 2em;
+}
+
+.modal-img {
+    width:auto;
+    max-height: 50vh;
+}
 /* Modal  */
 .modal-content {
     margin: auto;
     border: 1px solid #888;
-    width: 50%;
-    height: 80vh;
+    width: auto;
     background-color: white;
     padding: 2em;
+    display:grid;
+    grid-template-rows: repeat(2, auto);
 }
 
 /* Aboce is the modal */
