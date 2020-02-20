@@ -42,15 +42,18 @@ main {
 .wrapper {
     grid-row:2;
     display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
 
+}
+
+.modal-background {
+    display:none;
 }
 
 .modal {
     display:grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat (2, auto);
-    display:none;
 }
 
 .cartouche {
@@ -60,3 +63,6 @@ main {
 }
 
 
+.image-thumbnail {
+    width: 100%;
+}
