@@ -33,12 +33,8 @@ function createElements(newdata) {
 
     // console.log(`${newdata.gsx$id.$t}`);
 
-    console.log(clone_marker)
     //thinking about modal
-    console.log(`translate(${newdata.gsx$translatex.$t}px,${newdata.gsx$translatey.$t}px)`)
-    //clone_marker.style.transform = `translate(${newdata.gsx$translatey.$t}px, ${newdata.gsx$translatey.$t}px)`;
-    clone_marker.style.transform = `translate(${newdata.gsx$translatex}px, ${newdata.gsx$translatey}px)`;
-    clone_marker.style.fill = `hotpink`;
+    clone_marker.style.transform = `translate(${newdata.gsx$translatex.$t}px, ${newdata.gsx$translatey.$t}px) scale(0.1)` ;
     clone_marker.addEventListener("click", fillModal);
     document.querySelector(".denmark-map").appendChild(clone_marker);
 
@@ -63,7 +59,7 @@ function createElements(newdata) {
     const modal_background = document.querySelector(".modal");
 
     function fillModal(){
-        modal_background.style.display = "block";
+        modal_background.style.display = "grid";
 
         console.log(`${newdata.gsx$id.$t}`);
         title_modal.textContent = newdata.gsx$venue.$t;
