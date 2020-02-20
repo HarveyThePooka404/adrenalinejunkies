@@ -21,10 +21,8 @@ function createElements(newdata) {
     const desc_left = document.querySelector(".desc-left");
     const price_modal = document.querySelector(".price");
     const Xtremness_modal = document.querySelector(".Xtremness");
-    const ff = document.querySelector(".ff");
     const address = document.querySelector(".address");
-    const opening_hour = document.querySelector(".opening-hour");
-
+    const website = document.querySelector(".website");
 
 
     //create markers
@@ -70,6 +68,8 @@ function createElements(newdata) {
         price_modal.textContent = newdata.gsx$price.$t;
         Xtremness_modal.textContent = newdata.gsx$scary.$t;
         address.textContent = newdata.gsx$address.$t;
+        website.textContent = newdata.gsx$website.$t;
+
 
     }
 

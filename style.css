@@ -3,8 +3,24 @@
     box-sizing: border-box;
 }
 
+:root {
+  --main-color: #028695;
+    --sub-color:#70AFA4;
+    --button-color:#FF9648;
+    --button-hover:#FBD266;
+
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@font-face {
+    font-family:"Josefin";
+    src:url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+}
+
+
 header {
-    background-color:hotpink;
+    background-color: --main-color;
 }
 
 footer {
