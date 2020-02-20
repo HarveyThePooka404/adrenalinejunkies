@@ -46,8 +46,9 @@ function createElements(newdata) {
     clone_thumbnail.querySelector(".title-thumbnail").textContent = newdata.gsx$venue.$t;
     clone_thumbnail.querySelector(".price-thumbnail span").textContent = newdata.gsx$price.$t;
     clone_thumbnail.querySelector(".Xtremness-thumbnail").textContent = newdata.gsx$scary.$t;
-    clone_thumbnail.querySelector(".image-thumbnail").src = newdata.gsx$thumbnail.$t;
     clone_thumbnail.querySelector(".cartouche").style.backgroundImage = `url("${newdata.gsx$thumbnail.$t}")`;
+    clone_thumbnail.querySelector(".title-back-thumbnail").textContent = newdata.gsx$venue.$t;
+    clone_thumbnail.querySelector(".desc-back").textContent = newdata.gsx$description.$t;
 
     console.log(`url(${newdata.gsx$thumbnail.$t})`);
 
