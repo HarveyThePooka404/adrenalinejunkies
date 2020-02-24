@@ -36,7 +36,8 @@ footer {
 
 .denmark-map {
     height: auto;
-    width: 100%;
+    width: 60%;
+    justify-self: center;
 }
 
 .marker {
@@ -79,6 +80,10 @@ main {
     color: white;
     text-align: center;
     z-index: 1;
+}
+
+@keyframes ForLasse {
+    to {transform: scale(2)};
 }
 
 .overlay:hover .cartouche {
