@@ -62,7 +62,15 @@ main {
     grid-row-gap: 20px;
     grid-column-gap: 20px;
 }
+text {
+    stroke: black;
+stroke-width: 1px;
+    display:none;
+}
 
+.marker:hover + text {
+    display:block;
+}
 /* ------------------------------------ Styling the bottom grid ------------------------------------------------*/
 
 
