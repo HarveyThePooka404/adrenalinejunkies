@@ -70,7 +70,8 @@ main {
     grid-area: 1 / 1;
     padding-top: 5em;
     padding-bottom: 5em;
-    max-height: 40vh;
+/*     max-height: 40vh;
+     */
     height:100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -80,11 +81,13 @@ main {
     z-index: 1;
 }
 
-.cartouche:hover {
+.overlay:hover .cartouche {
     display:none;
 }
 
 .back-cartouche{
+        cursor:pointer;
+
     grid-area: 1 / 1;
     position:relative;
     color:white;

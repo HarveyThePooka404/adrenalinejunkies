@@ -7,6 +7,8 @@ function getData() {
         .then(sortData);
 }
 
+
+
 function sortData(data) {
     const myData = data.feed.entry;
     console.log(myData);
