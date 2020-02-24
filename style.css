@@ -5,6 +5,10 @@ body{
     color:white;
 }
 
+p{
+    line-height: 1.2;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -17,6 +21,7 @@ body{
     --button-hover:#FBD266;
     --red-color:#F55E50;
     --white-color:#fff;
+    --modal-color:#000;
 
 }
 
@@ -143,12 +148,17 @@ main {
     background-color: rgb(112,174,163,.9);
     display: inline-block;
     padding: 7px 10px 4px 10px;
+}
 
+.desc-back {
+    padding-top: 10px;
+}
 
-/*
-    margin-left: 70px;
-    margin-right: 70px;
-*/
+.price-thumbnail {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1em;
+    font-size: 1.1em;
 }
 
 
@@ -175,6 +185,7 @@ main {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.6);
     /* Black w/ opacity */
+    color:var(--modal-color);
 
 }
 
