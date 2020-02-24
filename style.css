@@ -139,6 +139,20 @@ main {
     display:grid;
 }
 
+.title-thumbnail {
+    background-color: rgb(112,174,163,.9);
+    display: inline-block;
+    padding: 7px 10px 4px 10px;
+
+
+/*
+    margin-left: 70px;
+    margin-right: 70px;
+*/
+}
+
+
+
 /* ----------------------------------------- Styling the modal ------------------------------------------------*/
 
 /* The Modal (background) */
