@@ -1,5 +1,4 @@
 /* ------------------------------------ General Styling -------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
 body{
     font-family: 'Josefin Sans', sans-serif;
@@ -23,6 +22,9 @@ body{
 
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+
 @font-face {
     font-family:"Josefin";
     src:url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
@@ -32,6 +34,16 @@ body{
 
 header {
     background-color: var(--main-color);
+
+}
+header .adventure {
+    display: inline-flex;
+    font-family: lacquer;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.adventureDenmark {
+    margin: auto;
 }
 
 footer {
@@ -70,6 +82,22 @@ main {
     grid-row-gap: 20px;
     grid-column-gap: 20px;
 }
+
+
+/*    Header    */
+.figLogo {
+/*
+     margin-left: 0vw;
+     margin-right: 00vw;
+*/
+    padding: 20px;
+}
+
+.logo{
+/*  transform: scaleX(-1);*/
+
+}
+
 
 /* ------------------------------------ Styling the bottom grid ------------------------------------------------*/
 
@@ -176,7 +204,7 @@ main {
 footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-weight:lighter;
+    font-weight:normal;
     padding-left: 5vw;
 
 
