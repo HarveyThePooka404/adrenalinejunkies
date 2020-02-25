@@ -1,18 +1,22 @@
 const link = "https://spreadsheets.google.com/feeds/list/1Ld5qK6WvXSsB-x7wOVz1vdrpKDe7uqztnTwoASzxVHs/od6/public/values?alt=json"
 window.addEventListener("DOMContentLoaded", getData);
-
+let jsonData=[]
 function getData() {
     fetch(link)
         .then(e => e.json())
-        .then(sortData);
+        .then(data=>{
+        jsonData=data.feed.entry;
+        showData(jsonData)
+    });
 }
 
 
 
-function sortData(data) {
-    const myData = data.feed.entry;
-    console.log(myData);
-    myData.forEach(createElements);
+function showData(data) {
+    //const myData = data.feed.entry;
+    console.log(data);
+    document.querySelector(".wrapper").innerHTML = "";
+    data.forEach(createElements);
 }
 
 function createElements(newdata) {
@@ -36,9 +40,22 @@ function createElements(newdata) {
     // console.log(`${newdata.gsx$id.$t}`);
 
     //thinking about modal
+    const title_holder = document.createElement("foreignobject");
+    const title_marker = document.createElementNS("http://www.w3.org/2000/svg", "text");
+
+    title_marker.textContent = newdata.gsx$venue.$t;
     clone_marker.style.transform = `translate(${newdata.gsx$translatex.$t}px, ${newdata.gsx$translatey.$t}px) scale(0.1)` ;
+
+
+    title_marker.setAttribute("x", "0" );
+    title_marker.setAttribute("y", "0");
+
+        title_marker.style.transform = `translate(${newdata.gsx$translatex.$t}px, ${newdata.gsx$translatey.$t}px)` ;
+
     clone_marker.addEventListener("click", fillModal);
+
     document.querySelector(".denmark-map").appendChild(clone_marker);
+    document.querySelector(".denmark-map").appendChild(title_marker);
 
     //create thumbnail
 
@@ -85,3 +102,9 @@ function createElements(newdata) {
             modal_background.style.display = "none";}}
 }
 
+
+const btn = document.querySelector('button');
+btn.addEventListener("click", function(){
+    jsonData.sort((a,b) => a.gsx$scary.$t - b.gsx$scary.$t);
+    showData(jsonData);
+})
