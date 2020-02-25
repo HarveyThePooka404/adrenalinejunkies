@@ -25,7 +25,7 @@ function createElements(newdata) {
     const title_modal = document.querySelector(".modal-title");
     const img_modal = document.querySelector(".modal-img");
     const desc_left = document.querySelector(".desc-left");
-    const price_modal = document.querySelector(".price");
+    const price_modal = document.querySelector(".price span");
     const Xtremness_modal = document.querySelector(".Xtremness");
     const address = document.querySelector(".address");
     const website = document.querySelector(".website");
@@ -66,12 +66,12 @@ function createElements(newdata) {
 
     clone_thumbnail.querySelector(".title-thumbnail").textContent = newdata.gsx$venue.$t;
     clone_thumbnail.querySelector(".price-thumbnail span").textContent = newdata.gsx$price.$t;
-    clone_thumbnail.querySelector(".Xtremness-thumbnail").textContent = newdata.gsx$scary.$t;
+    clone_thumbnail.querySelector(".Xtremness-thumbnail").src = `img/scariness/adventureicon-${newdata.gsx$scary.$t}.svg`;
     clone_thumbnail.querySelector(".cartouche").style.backgroundImage = `url("${newdata.gsx$thumbnail.$t}")`;
     clone_thumbnail.querySelector(".title-back-thumbnail").textContent = newdata.gsx$venue.$t;
     clone_thumbnail.querySelector(".desc-back").textContent = newdata.gsx$description.$t;
 
-    console.log(`url(${newdata.gsx$thumbnail.$t})`);
+    console.log(`"img/scariness/adventureicon-${newdata.gsx$scary.$t}.svg"`);
 
     //adds modal to thumbnail
 
@@ -92,7 +92,7 @@ function createElements(newdata) {
         img_modal.src = newdata.gsx$thumbnail.$t;
         desc_left.textContent = newdata.gsx$description.$t;
         price_modal.textContent = newdata.gsx$price.$t;
-        Xtremness_modal.textContent = newdata.gsx$scary.$t;
+        Xtremness_modal.src = `img/scariness/adventureicon-${newdata.gsx$scary.$t}.svg`;
         address.textContent = newdata.gsx$address.$t;
         website.textContent = newdata.gsx$website.$t;
 
@@ -105,8 +105,8 @@ function createElements(newdata) {
 }
 
 
-const btn = document.querySelector('button');
+/* const btn = document.querySelector('button');
 btn.addEventListener("click", function(){
     jsonData.sort((a,b) => a.gsx$scary.$t - b.gsx$scary.$t);
     showData(jsonData);
-})
+}) */
