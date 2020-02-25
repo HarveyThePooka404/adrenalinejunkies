@@ -95,6 +95,7 @@ function createElements(newdata) {
         Xtremness_modal.src = `img/scariness/adventureicon-${newdata.gsx$scary.$t}.svg`;
         address.textContent = newdata.gsx$address.$t;
         website.textContent = newdata.gsx$website.$t;
+        website.href = newdata.gsx$website.$t;
 
 
     }
