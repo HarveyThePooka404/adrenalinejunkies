@@ -40,17 +40,19 @@ function createElements(newdata) {
     // console.log(`${newdata.gsx$id.$t}`);
 
     //thinking about modal
-    const title_holder = document.createElement("foreignobject");
     const title_marker = document.createElementNS("http://www.w3.org/2000/svg", "text");
 
     title_marker.textContent = newdata.gsx$venue.$t;
+    // const title_marker_x = calc(`${newdata.gsx$translatex.$t}` - 10);
+    const title_marker_x = newdata.gsx$translatex.$t - newdata.gsx$venue.$t.length*1.5;
+    console.log(newdata.gsx$venue.$t.length/2);
     clone_marker.style.transform = `translate(${newdata.gsx$translatex.$t}px, ${newdata.gsx$translatey.$t}px) scale(0.1)` ;
 
 
     title_marker.setAttribute("x", "0" );
     title_marker.setAttribute("y", "0");
 
-        title_marker.style.transform = `translate(${newdata.gsx$translatex.$t}px, ${newdata.gsx$translatey.$t}px)` ;
+        title_marker.style.transform = `translate(${title_marker_x}px, ${newdata.gsx$translatey.$t}px)` ;
 
     clone_marker.addEventListener("click", fillModal);
 
