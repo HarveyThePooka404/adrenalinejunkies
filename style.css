@@ -45,6 +45,7 @@ header {
     z-index: -1;
     display:grid;
     margin-bottom: 3px;
+    border-bottom: solid 3px var(--button-color);
 }
 
 .figLogo {
@@ -55,14 +56,6 @@ header {
     width:420px;
 }
 
-
-.headerStroke {
-    width:100vw;
-    height: 7px;
-    background:var(--button-color);
-    align-self: flex-end;
-    opacity: 0.9;
-}
 
 
 footer {
