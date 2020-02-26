@@ -153,10 +153,37 @@ stroke-width: 1px;
     to {transform: scale(2)};
 }
 
-.overlay:hover .cartouche {
-    display:none;
+/* ----------------------------------- flipping -------------------------------------------------------*/
+.overlay {
+    background-color: transparent;
+    display:grid;
+    height: auto;
+    width: auto;
 }
 
+/* .overlay:hover .cartouche {
+    display:none;
+}*/
+
+.flipping {
+    position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.overlay:hover .flipping{
+  transform: rotateY(180deg);
+}
+
+.cartouche, .back-cartouche {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
 .back-cartouche{
         cursor:pointer;
 
@@ -164,10 +191,11 @@ stroke-width: 1px;
     position:relative;
     color:white;
     padding: 3em;
-}
-.overlay {
-    background-color:var(--sub-color);
-    display:grid;
+    transform: rotateY(180deg);
+        background-color:var(--sub-color);
+
+
+
 }
 
 .title-thumbnail {
