@@ -44,22 +44,31 @@ header {
     height: 280px;
     z-index: -1;
     display:grid;
+    margin-bottom: 10px;
 }
 
 .figLogo {
 /*    display:inline-block;*/
      margin: auto;
-    margin-top: 0px;
-/*    padding: 20px;*/
-    width:300px;
+    margin-top: -4px;
+/*    padding: 0px;*/
+    width:420px;
+}
+
+.headerStrokeBlue {
+    width:100vw;
+    height: 16px;
+    background:var(--main-color);
+    align-self: flex-end;
+    margin-bottom: -5px;
 }
 
 .headerStroke {
     width:100vw;
-    height: 20px;
-    background:var(--main-color);
+    height: 7px;
+    background:var(--button-color);
     align-self: flex-end;
-    margin-bottom: 0px;
+    opacity: 0.9;
 }
 
 
