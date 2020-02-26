@@ -44,7 +44,7 @@ header {
     height: 280px;
     z-index: -1;
     display:grid;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 
 .figLogo {
@@ -167,9 +167,6 @@ stroke-width: 1px;
     z-index: 1;
 }
 
-@keyframes ForLasse {
-    to {transform: scale(2)};
-}
 
 /* ----------------------------------- flipping -------------------------------------------------------*/
 .overlay {
@@ -179,21 +176,20 @@ stroke-width: 1px;
     width: auto;
 }
 
-/* .overlay:hover .cartouche {
-    display:none;
-}*/
-
 .flipping {
     position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.7s;
+  transition: 0.3s ease-out;
   transform-style: preserve-3d;
+
 }
 
 .overlay:hover .flipping{
   transform: rotateY(180deg);
+      transition: 0.6s ease-out;
+
 }
 
 .cartouche, .back-cartouche {
