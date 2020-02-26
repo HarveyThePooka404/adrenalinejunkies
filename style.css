@@ -33,19 +33,37 @@ p{
 
 /* ------------------------------------ Header/footer and Map -------------------------------------------------------*/
 
-header {
-    background-color: var(--main-color);
 
+header {
+/*    background-color: var(--main-color);*/
+  background-image: url('img/images/trees-08.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    width: 100vw;
+    height: 280px;
+    z-index: -1;
+    display:grid;
+    margin-bottom: 10px;
 }
-header .adventure {
-    display: inline-flex;
-    font-family: lacquer;
-    margin-top: auto;
-    margin-bottom: auto;
+
+.figLogo {
+/*    display:inline-block;*/
+     margin: auto;
+    margin-top: -4px;
+/*    padding: 0px;*/
+    width:420px;
 }
-.adventureDenmark {
-    margin: auto;
+
+
+.headerStroke {
+    width:100vw;
+    height: 7px;
+    background:var(--button-color);
+    align-self: flex-end;
+    opacity: 0.9;
 }
+
 
 footer {
     background-color:var(--main-color);
