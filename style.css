@@ -55,13 +55,6 @@ header {
     width:420px;
 }
 
-.headerStrokeBlue {
-    width:100vw;
-    height: 16px;
-    background:var(--main-color);
-    align-self: flex-end;
-    margin-bottom: -5px;
-}
 
 .headerStroke {
     width:100vw;
