@@ -89,19 +89,26 @@ header {
     background-size: cover;
     background-position:center;
     width: 100vw;
-    height: 250px;
+    height: 280px;
     z-index: -1;
-    display:flex;
+    display:grid;
 }
 
 .figLogo {
-    display:inline-block;
+/*    display:inline-block;*/
      margin: auto;
     margin-top: 0px;
 /*    padding: 20px;*/
     width:300px;
 }
 
+.headerStroke {
+    width:100vw;
+    height: 20px;
+    background:var(--main-color);
+    align-self: flex-end;
+    margin-bottom: 0px;
+}
 
 /* ------------------------------------ Styling the bottom grid ------------------------------------------------*/
 
