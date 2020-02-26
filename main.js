@@ -45,7 +45,6 @@ function createElements(newdata) {
     title_marker.textContent = newdata.gsx$venue.$t;
     // const title_marker_x = calc(`${newdata.gsx$translatex.$t}` - 10);
     const title_marker_x = newdata.gsx$translatex.$t - newdata.gsx$venue.$t.length*1.5;
-    console.log(newdata.gsx$venue.$t.length/2);
     clone_marker.style.transform = `translate(${newdata.gsx$translatex.$t}px, ${newdata.gsx$translatey.$t}px) scale(0.1)` ;
 
 
@@ -70,8 +69,6 @@ function createElements(newdata) {
     clone_thumbnail.querySelector(".cartouche").style.backgroundImage = `url("${newdata.gsx$thumbnail.$t}")`;
     clone_thumbnail.querySelector(".title-back-thumbnail").textContent = newdata.gsx$venue.$t;
     clone_thumbnail.querySelector(".desc-back").textContent = newdata.gsx$description.$t;
-
-    console.log(`"img/scariness/adventureicon-${newdata.gsx$scary.$t}.svg"`);
 
     //adds modal to thumbnail
 
@@ -106,8 +103,14 @@ function createElements(newdata) {
 }
 
 
-/* const btn = document.querySelector('button');
+const btn = document.querySelector('.everyone');
 btn.addEventListener("click", function(){
     jsonData.sort((a,b) => a.gsx$scary.$t - b.gsx$scary.$t);
     showData(jsonData);
-}) */
+})
+
+const risky = document.querySelector('.risky');
+risky.addEventListener("click", function(){
+    jsonData.sort((a,b) => b.gsx$scary.$t - a.gsx$scary.$t);
+    showData(jsonData);
+})
