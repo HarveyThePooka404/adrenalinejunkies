@@ -171,14 +171,12 @@ stroke-width: 1px;
   height: 100%;
   text-align: center;
     transform-style: preserve-3d;
-}
-
-@keyframes nowayback {
-    to {transform: rotateY(180deg);}
+    transition: .3s ease-out;
 }
 
 .overlay:hover .flipping{
-  animation: 0.5s nowayback ease-in forwards;
+    transition: .6s;
+  transform: rotateY(180deg);
 }
 
 .cartouche, .back-cartouche {
