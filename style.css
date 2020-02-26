@@ -1,11 +1,11 @@
 /* ------------------------------------ General Styling -------------------------------------------------------*/
 
-body{
+body {
     font-family: 'Josefin Sans', sans-serif;
-    color:white;
+    color: white;
 }
 
-p{
+p {
     line-height: 1.2;
 }
 
@@ -15,13 +15,13 @@ p{
 }
 
 :root {
-  --sub-color: #028695;
-    --main-color:#70AFA4;
-    --button-color:#FF9648;
-    --button-hover:#FBD266;
-    --red-color:#F55E50;
-    --white-color:#fff;
-    --modal-color:#000;
+    --sub-color: #028695;
+    --main-color: #70AFA4;
+    --button-color: #FF9648;
+    --button-hover: #FBD266;
+    --red-color: #F55E50;
+    --white-color: #fff;
+    --modal-color: #000;
 
 }
 
@@ -31,30 +31,46 @@ p{
 @import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
 
 @font-face {
-    font-family:"Josefin";
-    src:url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+    font-family: "Josefin";
+    src: url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 }
 
 /* ------------------------------------ Header/footer and Map -------------------------------------------------------*/
 
-header {
-    background-color: var(--main-color);
+.background {
+/*        background-color: var(--main-color);*/
+    background-image: url('img/images/forest2.jpg');
+    background-repeat: no-repeat;
+/*    background-attachment: inherit;*/
+    background-size: cover;
+    background-position:center;
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    z-index: -1;
+    opacity: .5;
+/*    transform: translate(0,-20%);*/
+/*    transform: scale(-1)*/
 
 }
+
 header .adventure {
     display: inline-flex;
     font-family: lacquer;
     margin-top: auto;
     margin-bottom: auto;
+    height: 230px;
 }
+
 .adventureDenmark {
     margin: auto;
 }
 
 footer {
-    background-color:var(--main-color);
+    background-color: var(--main-color);
     padding: 20px;
 }
+
 .region:hover {
     fill: var(--button-hover);
 }
@@ -66,12 +82,12 @@ footer {
 }
 
 .marker {
-    fill:var(--button-color);
+    fill: var(--button-color);
 
 }
 
-.marker:hover{
-    fill:var(--red-color);
+.marker:hover {
+    fill: var(--red-color);
 }
 
 main {
@@ -81,8 +97,8 @@ main {
 }
 
 .wrapper {
-    grid-row:2;
-    display:grid;
+    grid-row: 2;
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-row-gap: 20px;
     grid-column-gap: 20px;
@@ -91,15 +107,22 @@ main {
 
 /*    Header    */
 .figLogo {
-/*
-     margin-left: 0vw;
-     margin-right: 00vw;
-*/
+
+     margin-left: 43vw;
+     margin-right: 44vw;
+
     padding: 20px;
+
 }
 
-.logo{
-/*  transform: scaleX(-1);*/
+.logo {
+    /*  transform: scaleX(-1);*/
+/*
+     margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+*/
 
 }
 
@@ -112,9 +135,9 @@ main {
     grid-area: 1 / 1;
     padding-top: 5em;
     padding-bottom: 5em;
-/*     max-height: 40vh;
+    /*     max-height: 40vh;
      */
-    height:100%;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -124,28 +147,33 @@ main {
 }
 
 @keyframes ForLasse {
-    to {transform: scale(2)};
+    to {
+        transform: scale(2)
+    }
+
+    ;
 }
 
 .overlay:hover .cartouche {
-    display:none;
+    display: none;
 }
 
-.back-cartouche{
-        cursor:pointer;
+.back-cartouche {
+    cursor: pointer;
 
     grid-area: 1 / 1;
-    position:relative;
-    color:white;
+    position: relative;
+    color: white;
     padding: 3em;
 }
+
 .overlay {
-    background-color:var(--sub-color);
-    display:grid;
+    background-color: var(--sub-color);
+    display: grid;
 }
 
 .title-thumbnail {
-    background-color: rgb(112,174,163,.9);
+    background-color: rgb(112, 174, 163, .9);
     display: inline-block;
     padding: 7px 10px 4px 10px;
 }
@@ -185,7 +213,7 @@ main {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.6);
     /* Black w/ opacity */
-    color:var(--modal-color);
+    color: var(--modal-color);
 
 }
 
@@ -196,7 +224,7 @@ main {
 
 .wrapper-bottom-modal {
     padding-top: 2em;
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -205,9 +233,10 @@ main {
 }
 
 .modal-img {
-    width:auto;
+    width: auto;
     max-height: 50vh;
 }
+
 /* Modal  */
 .modal-content {
     margin: auto;
@@ -215,7 +244,7 @@ main {
     width: 70%;
     background-color: white;
     padding: 2em;
-    display:grid;
+    display: grid;
     grid-template-rows: repeat(2, auto);
 }
 
@@ -226,37 +255,35 @@ main {
 
 /* Footer */
 
-footer{
+footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-weight:normal;
+    font-weight: normal;
     padding-left: 5vw;
 
 
 }
 
-address{
+address {
     font-style: normal;
     line-height: 1.3;
 
 }
 
-li{
+li {
     list-style-type: none;
 }
 
-li a{
+li a {
     text-decoration: none;
     color: var(--white-color);
 }
 
-.addressName {
-
-}
+.addressName {}
 
 .SoMe {
     display: inline-flex;
-    margin-left:auto;
+    margin-left: auto;
     margin-top: auto;
     margin-right: 4vw;
     opacity: .8;
@@ -266,8 +293,9 @@ li a{
     padding-top: 5px;
     margin-left: 10px;
 }
+
 @media only screen and (max-width:605px) {
-    footer{
+    footer {
         grid-template-columns: 1fr;
     }
 
@@ -276,7 +304,3 @@ li a{
         margin-top: 15px;
     }
 }
-
-
-
-
