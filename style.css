@@ -37,14 +37,11 @@ p{
 
 /* ------------------------------------ Header/footer and Map -------------------------------------------------------*/
 
-header {
-    background-color: var(--main-color);
 
-}
 
-.background {
+/*.background {*/
 /*        background-color: var(--main-color);*/
-    background-image: url('img/images/forest2.jpg');
+    background-image: url('img/images/trees-08.jpg');
     background-repeat: no-repeat;
 /*    background-attachment: inherit;*/
     background-size: cover;
@@ -59,12 +56,14 @@ header {
 
 }
 
+/*
 header .adventure {
     display: inline-flex;
     font-family: lacquer;
     margin-top: auto;
     margin-bottom: auto;
 }
+*/
 .adventureDenmark {
     margin: auto;
 }
@@ -108,11 +107,28 @@ main {
 
 
 /*    Header    */
+
+header {
+/*    background-color: var(--main-color);*/
+  background-image: url('img/images/trees-08.jpg');
+    background-repeat: no-repeat;
+/*    background-attachment: inherit;*/
+    background-size: cover;
+    background-position:center;
+    width: 100vw;
+    height: 250px;
+/*    position: absolute;*/
+    z-index: -1;
+/*    margin-top: 0px;*/
+/*    opacity: .5;*/
+    display:flex;
+}
+
 .figLogo {
     display:inline-block;
-     margin-left: auto;
-     margin-right: auto;
-    padding: 20px;
+     margin: auto;
+/*    padding: 20px;*/
+    width:300px;
 }
 
 .logo{
