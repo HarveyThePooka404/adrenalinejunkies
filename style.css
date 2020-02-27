@@ -102,6 +102,12 @@ button {
     color: white;
     cursor:pointer;
     text-align: right;
+    font-style: normal;
+}
+
+a {
+    color: var(--modal-color);
+    text-decoration: none;
 }
 
 button:hover {
@@ -238,7 +244,7 @@ stroke-width: 1px;
     /* Stay in place */
     z-index: 2;
     /* Sit on top */
-    padding-top: 4vh;
+    padding-top: 2vh;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -277,8 +283,18 @@ stroke-width: 1px;
     display:grid;
     grid-template-rows: repeat(2, auto);
     border-radius: 10px;
+    padding: 25px;
 
 }
+
+.websiteButton {
+   margin-top: 20px;
+   display:flex;
+    align-content: flex-end;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: .9em;
+}
+
 
 .left-column {
     padding-right: 1em;
@@ -286,6 +302,7 @@ stroke-width: 1px;
 .right-column {
     padding-left: 1em;
     border-left: 2px solid black;
+
 }
 
 .Xtremness {
@@ -311,6 +328,7 @@ h2 {
 .modal-img {
     height: auto;
     max-height: 450px;
+    padding: 2vh;
 }
 
 /* Aboce is the modal */
