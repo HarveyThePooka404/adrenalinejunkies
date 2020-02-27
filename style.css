@@ -310,7 +310,7 @@ text {
 
 
 .left-column {
-    padding-right: 1em;
+   padding-right: 1em;
 }
 
 .right-column {
@@ -394,6 +394,15 @@ li a {
 }
 
 .addressName {}
+
+footer li a:hover{
+    color:var(--button-hover);
+}
+
+.addressName {
+
+}
+>>>>>>> footer-hover
 
 .SoMe {
     display: inline-flex;
