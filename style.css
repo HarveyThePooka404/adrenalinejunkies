@@ -44,7 +44,8 @@ header {
     height: 280px;
     z-index: -1;
     display:grid;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
+    border-bottom: solid 3px var(--button-color);
 }
 
 .figLogo {
@@ -55,14 +56,6 @@ header {
     width:420px;
 }
 
-
-.headerStroke {
-    width:100vw;
-    height: 7px;
-    background:var(--button-color);
-    align-self: flex-end;
-    opacity: 0.9;
-}
 
 
 footer {
@@ -109,6 +102,12 @@ button {
     color: white;
     cursor:pointer;
     text-align: right;
+    font-style: normal;
+}
+
+a {
+    color: var(--modal-color);
+    text-decoration: none;
 }
 
 button:hover {
@@ -167,9 +166,6 @@ stroke-width: 1px;
     z-index: 1;
 }
 
-@keyframes ForLasse {
-    to {transform: scale(2)};
-}
 
 /* ----------------------------------- flipping -------------------------------------------------------*/
 .overlay {
@@ -179,24 +175,18 @@ stroke-width: 1px;
     width: auto;
 }
 
-/* .overlay:hover .cartouche {
-    display:none;
-}*/
-
 .flipping {
     position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
     transform-style: preserve-3d;
-}
-
-@keyframes nowayback {
-    to {transform: rotateY(180deg);}
+    transition: 0.3s ease-out;
 }
 
 .overlay:hover .flipping{
-  animation: 0.5s nowayback ease-in forwards;
+  transform: rotateY(180deg);
+      transition: 0.6s ease-out;
 }
 
 .cartouche, .back-cartouche {
@@ -251,7 +241,7 @@ stroke-width: 1px;
     /* Stay in place */
     z-index: 2;
     /* Sit on top */
-    padding-top: 4vh;
+    padding-top: 2vh;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -290,8 +280,18 @@ stroke-width: 1px;
     display:grid;
     grid-template-rows: repeat(2, auto);
     border-radius: 10px;
+    padding: 25px;
 
 }
+
+.websiteButton {
+   margin-top: 20px;
+   display:flex;
+    align-content: flex-end;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: .9em;
+}
+
 
 .left-column {
     padding-right: 1em;
@@ -299,6 +299,7 @@ stroke-width: 1px;
 .right-column {
     padding-left: 1em;
     border-left: 2px solid black;
+
 }
 
 .Xtremness {
@@ -324,6 +325,7 @@ h2 {
 .modal-img {
     height: auto;
     max-height: 450px;
+    padding: 2vh;
 }
 
 /* Aboce is the modal */
