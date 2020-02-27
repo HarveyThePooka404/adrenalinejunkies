@@ -1,13 +1,14 @@
 const link = "https://spreadsheets.google.com/feeds/list/1Ld5qK6WvXSsB-x7wOVz1vdrpKDe7uqztnTwoASzxVHs/od6/public/values?alt=json"
 window.addEventListener("DOMContentLoaded", getData);
-let jsonData=[]
+let jsonData = []
+
 function getData() {
     fetch(link)
         .then(e => e.json())
-        .then(data=>{
-        jsonData=data.feed.entry;
-        showData(jsonData)
-    });
+        .then(data => {
+            jsonData = data.feed.entry;
+            showData(jsonData)
+        });
 }
 
 
@@ -44,14 +45,16 @@ function createElements(newdata) {
 
     title_marker.textContent = newdata.gsx$venue.$t;
     // const title_marker_x = calc(`${newdata.gsx$translatex.$t}` - 10);
-    const title_marker_x = newdata.gsx$translatex.$t - newdata.gsx$venue.$t.length*1.5;
-    clone_marker.style.transform = `translate(${newdata.gsx$translatex.$t}px, ${newdata.gsx$translatey.$t}px) scale(0.1)` ;
+    const title_marker_x = newdata.gsx$translatex.$t - newdata.gsx$venue.$t.length * 1.5;
+    clone_marker.style.transform = `translate(${newdata.gsx$translatex.$t}px, ${newdata.gsx$translatey.$t}px) scale(0.1)`;
 
+    clone_marker.dataset.tx = `${newdata.gsx$translatex.$t}`
+    clone_marker.dataset.ty = `${newdata.gsx$translatey.$t}`
 
-    title_marker.setAttribute("x", "0" );
+    title_marker.setAttribute("x", "0");
     title_marker.setAttribute("y", "0");
 
-        title_marker.style.transform = `translate(${title_marker_x}px, ${newdata.gsx$translatey.$t}px)` ;
+    title_marker.style.transform = `translate(${title_marker_x}px, ${newdata.gsx$translatey.$t}px)`;
 
     clone_marker.addEventListener("click", fillModal);
 
@@ -81,7 +84,7 @@ function createElements(newdata) {
 
     const modal_background = document.querySelector(".modal");
 
-    function fillModal(){
+    function fillModal() {
         modal_background.style.display = "block";
 
         console.log(`${newdata.gsx$id.$t}`);
@@ -91,26 +94,83 @@ function createElements(newdata) {
         price_modal.textContent = newdata.gsx$price.$t;
         Xtremness_modal.src = `img/scariness/adventureicon-${newdata.gsx$scary.$t}.svg`;
         address.textContent = newdata.gsx$address.$t;
-//        website.textContent = newdata.gsx$website.$t;
+        //        website.textContent = newdata.gsx$website.$t;
         website.href = newdata.gsx$website.$t;
 
 
     }
 
-        window.onclick = function (event) {
+    window.onclick = function (event) {
         if (event.target == modal_background) {
-            modal_background.style.display = "none";}}
+            modal_background.style.display = "none";
+        }
+    }
 }
 
 
 const btn = document.querySelector('.everyone');
-btn.addEventListener("click", function(){
-    jsonData.sort((a,b) => a.gsx$scary.$t - b.gsx$scary.$t);
+btn.addEventListener("click", function () {
+    jsonData.sort((a, b) => a.gsx$scary.$t - b.gsx$scary.$t);
     showData(jsonData);
 })
 
 const risky = document.querySelector('.risky');
-risky.addEventListener("click", function(){
-    jsonData.sort((a,b) => b.gsx$scary.$t - a.gsx$scary.$t);
+risky.addEventListener("click", function () {
+    jsonData.sort((a, b) => b.gsx$scary.$t - a.gsx$scary.$t);
     showData(jsonData);
 })
+
+
+// trying to do a zoom. Let's yolo it.
+
+const Midtjylland = document.querySelector(".Midtjylland");
+const Syddanmark = document.querySelector(".Syddanmark");
+const Nordjylland = document.querySelector(".Nordjylland");
+const Hovedstaden = document.querySelector(".Hovedstaden");
+const Sjalland = document.querySelector(".Sjalland");
+
+
+
+/*Hovedstaden.addEventListener("click", () => {
+
+    const markers = document.querySelectorAll(".marker");
+    markers.forEach((e) => {
+        e.classList.add("zoomed");
+    })
+
+})*/
+
+document.querySelector(".denmark-map").addEventListener("click", (e) => {
+    console.log(e);
+    if (e.target.classList.contains("Hovedstaden")) {
+        console.log("first if");
+        document.querySelector("svg").classList.add('zoomed');
+        document.querySelector("svg").setAttribute("viewBox", "500 420 200 150");
+        document.querySelectorAll("svg .marker").forEach(marker => {
+            marker.style.transform = `translate(${Number(marker.dataset.tx)+12}px, ${Number(marker.dataset.ty)+35}px) scale(0.05)`;
+        })
+    } else if (e.target.classList.contains("Midtjylland")) {
+        document.querySelector("svg").setAttribute("viewBox", "0 200 400 350");
+    }
+
+    else if (e.target.classList.contains("Nordjylland")) {
+        document.querySelector("svg").setAttribute("viewBox", "0 0 400 350");
+    }
+
+    else if (e.target.classList.contains("Sjalland")) {
+        document.querySelector("svg").setAttribute("viewBox", "400 460 400 350");
+    }
+
+        else if (e.target.classList.contains("Syddanmark")) {
+        document.querySelector("svg").setAttribute("viewBox", "0 420 400 350");
+    }
+
+    else {
+        console.log("second if");
+        document.querySelector("svg").classList.remove('zoomed')
+        document.querySelector(".denmark-map").setAttribute("viewBox", "0 0 1000 811");
+        document.querySelectorAll("svg .marker").forEach(marker => {
+            marker.style.transform = `translate(${marker.dataset.tx}px, ${marker.dataset.ty}px) scale(0.1)`;
+        })
+    }
+});
