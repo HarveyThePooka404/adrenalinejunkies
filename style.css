@@ -244,12 +244,24 @@ text {
     text-align: right;
     margin-top: 1em;
     font-size: 1.1em;
+    grid-area: 2 / 2;
 }
 
 .Xtremness-thumbnail {
     display: block;
     max-height: 2em;
-    margin-left: auto;
+    grid-area: 2/ 1;
+}
+
+.adventure-level {
+    align-self: end;
+}
+.adventure-level-hover{
+    padding-top: 2em;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
 }
 
 /* ----------------------------------------- Styling the modal ------------------------------------------------*/
@@ -332,17 +344,17 @@ h2 {
 .find {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 
 .everyone {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 2em;
+    font-size: 1em;
 }
 .risky {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 2em;
+    font-size: 1em;
      text-align: center;
 }
 
