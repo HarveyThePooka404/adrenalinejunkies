@@ -256,9 +256,10 @@ text {
 .adventure-level {
     align-self: end;
 }
-.adventure-level-hover{
+
+.adventure-level-hover {
     padding-top: 2em;
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 
@@ -342,6 +343,7 @@ h2 {
 }
 
 .find {
+    margin-top: 20px;
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     font-size: 2em;
@@ -351,11 +353,18 @@ h2 {
 .everyone {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1em;
+    margin: 10px;
 }
+
 .risky {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1em;
-     text-align: center;
+    margin: 10px;
+}
+
+.adventure-buttons {
+    display: flex;
+    justify-content: center;
 }
 
 .modal-img {
