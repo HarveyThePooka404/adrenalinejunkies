@@ -322,10 +322,11 @@ text {
 .Xtremness {
     max-height: 2em;
     display: block;
-    margin-left: auto;
+    margin-right: auto;
 }
 
 .price {
+    font-size: 20px;
     font-weight: bold;
     text-align: right;
 }
@@ -362,7 +363,7 @@ h2 {
 
 .modal-img {
     height: auto;
-    max-height: 450px;
+    max-height: 300px;
     padding: 2vh;
 }
 
