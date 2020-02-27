@@ -76,11 +76,14 @@ footer {
 .marker {
     fill: var(--button-color);
 
+
 }
 
 .marker:hover {
     fill: var(--red-color);
 }
+
+.zoomed .marker{}
 
 main {
     display: grid;
