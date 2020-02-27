@@ -44,14 +44,9 @@ header {
     width: 100vw;
     height: 280px;
     z-index: -1;
-<<<<<<< HEAD
-    display:grid;
-    margin-bottom: 3px;
-    border-bottom: solid 3px var(--button-color);
-=======
     display: grid;
     margin-bottom: 3px;
->>>>>>> advenure-level-copy
+    border-bottom: solid 3px var(--button-color);
 }
 
 .figLogo {
@@ -62,18 +57,6 @@ header {
     width: 420px;
 }
 
-
-<<<<<<< HEAD
-=======
-.headerStroke {
-    width: 100vw;
-    height: 7px;
-    background: var(--button-color);
-    align-self: flex-end;
-    opacity: 0.9;
-}
-
->>>>>>> advenure-level-copy
 
 footer {
     background-color: var(--main-color);
@@ -197,43 +180,16 @@ text {
 
 .flipping {
     position: relative;
-<<<<<<< HEAD
-  width: 100%;
-  height: 100%;
-  text-align: center;
-    transform-style: preserve-3d;
-    transition: 0.3s ease-out;
-}
-
-.overlay:hover .flipping{
-  transform: rotateY(180deg);
-      transition: 0.6s ease-out;
-=======
     width: 100%;
     height: 100%;
     text-align: center;
-    <<<<<<< HEAD transform-style: preserve-3d;
-}
-
-@keyframes nowayback {
-    to {
-        transform: rotateY(180deg);
-    }
-}
-
-.overlay:hover .flipping {
-    animation: 0.5s nowayback ease-in forwards;
-    =======transition: 0.3s ease-out;
     transform-style: preserve-3d;
-
->>>>>>> advenure-level-copy
+    transition: 0.3s ease-out;
 }
 
 .overlay:hover .flipping {
     transform: rotateY(180deg);
     transition: 0.6s ease-out;
-
-    > > > > > > > origin/master
 }
 
 .cartouche,
@@ -252,8 +208,6 @@ text {
     padding: 3em;
     transform: rotateY(180deg);
     background-color: var(--sub-color);
-
-
 
 }
 
@@ -347,8 +301,8 @@ text {
 }
 
 .websiteButton {
-   margin-top: 20px;
-   display:flex;
+    margin-top: 20px;
+    display: flex;
     align-content: flex-end;
     font-family: 'Josefin Sans', sans-serif;
     font-size: .9em;
